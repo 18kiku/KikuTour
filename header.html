@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+        span {
+            font-size: 0.6em;
+        }
+        .header_wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .inner {
+            margin-bottom: 20px;
+        }
+        .inner1 {
+            text-align: right;
+            font-size: 0.6em;
+        }
+        .inner2_left {
+            float: left;
+            width: 70%;
+        }
+        .title {
+            font-size: 3em;
+            margin-right: 30px;
+        }
+        input[type='search'] {
+            width: 300px;
+            height: 40px;
+            padding-top: 24px;
+            font-size: 35px;
+            /* search 안 글씨 높이 조정하기*/
+        }
+        .inner2_right {
+            float: right;
+        }
+        .mini_menu {
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+        .mini_menu img {
+            width: 30px;
+        }
+        .my_menu img:hover {
+            content: url(user-color.png);
+        }
+        .reservation img:hover {
+            content: url(reservation-color.png);
+        }
+        .like img:hover {
+            content: url(heart-color.png);
+        }
+        .block {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 10px 0;
+        }
+        .menu_all {
+            text-align: center;
+            width: 130px;
+            padding: 10px;
+            font-size: 1.2em;
+            border-right: 1px solid #000;
+        }
+        .menu_list {
+            height: 28px;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+        .inner3 nav .block div, .inner3 nav .block ul {
+            display: inline;
+        }
+        .menu_list {
+            list-style: none;
+        }
+        .menu_list li {
+            display: inline;
+        }
+
+
+        .clear_fix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <div class="ad"></div>
+            <div class="inner inner1">
+                <!-- jstl c:if 처리-->
+                <!-- session이 없을 경우-->
+                <a>로그인</a>&ensp;
+                <a>회원가입</a>&ensp;
+                <a>고객센터</a>
+                <!-- session이 있을 경우-->
+                <a>로그아웃</a>&ensp;
+                <a>고객센터</a>
+            </div>
+            <div class="inner inner2">
+                <div class="inner2_left"> <!-- float: left, width 약 70%-->
+                    <img src="airplane.png" alt="title" width="50">
+                    <span class="title">KIKU TOUR</span>
+                    <input type="search" name="search">
+                    <!-- vertical slider, 추후에 인기검색어 기능을 위해 search 테이블 작성-->
+                </div>
+                <div class="inner2_right"> <!-- float: left-->
+                    <div class="mini_menu my_menu">
+                        <img src="user-white.png" alt="my menu"><br>
+                        <span>마이메뉴</span>
+                    </div>
+                    <div class="mini_menu reservation">
+                        <img src="reservation-white.png" alt="reservation"><br>
+                        <span>예약내역</span>
+                    </div>
+                    <div class="mini_menu like">
+                        <img src="heart-white.png" alt="like"><br>
+                        <span>찜</span>
+                    </div>
+                </div>
+                <div class="clear_fix"></div> <!-- clear: both-->
+            </div>
+            <div class="inner inner3">
+                <nav>
+                    <div class="block">
+                        <div class="menu_all">
+                            <a href="#">☰ 전체 메뉴</a>
+                        </div>
+                        <ul class="menu_list">
+                            <li><a href="#">해외여행</a></li>
+                            <li><a href="#">국내여행</a></li>
+                        </ul>
+                    </div>
+                    <div class="hover">
+                        <!-- hover효과 세부메뉴-->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
